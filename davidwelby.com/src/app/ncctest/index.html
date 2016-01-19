@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en" ng-app="nccTest">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A test for ncc group.">
+    <title>ncctest - david welby</title>
+    <link rel="stylesheet" href="../../../vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../vendor/bootstrap/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+</head>
+<body ng-controller="nccController">
+<div id="nccContainer" style="position:relative;">
+    <div style="width:80%; height:500px; display: block; margin-left: auto; margin-right: auto;">
+        <h3 >David Welby technical test - nccgroup</h3>
+        Time in milliseconds
+        <linechart data='data' options='options'></linechart>
+        <the-input-table new-data="newData.arr"></the-input-table>
+        <div style="position:relative;clear:both;">
+            <h2>Update...</h2>
+            <h3>Information on what I have done</h3>
+            <p>
+                In this example I created a graphical bar chart that reflects the information in the data table below.
+            </p>
+            <p>This example was created as an AngularJS single page web application and it consists of a main controller
+                "nccTest" which contains the base data used for the bar chart.
+                I also created a separate directive "theInputTable" which contains all of the base data and functional logic
+                related to the data table found below the bar chart.
+            </p>
+            <p>
+                In this example I used:
+            <ul>
+                <li>
+                    <a href="https://angularjs.org/">AngularJS</a> - a powerful MVC framework used to create scalable maintainable web applications
+                </li>
+                <li>
+                    <a href="http://n3-charts.github.io/line-chart/#/">n3-charts</a> -  an AngularJS library
+                    built on top of the popular D3.js a popular library for manipulating documents based on data.
+                </li>
+                <li><a href="http://lorenzofox3.github.io/smart-table-website/">Smart Table</a> - an Angularjs module used to easily display data
+                    in a table with a set of built in features such filtering,sorting, etc in a declarative way.
+                </li>
+            </ul>
+            These tools allowed me to quickly create a demo with all of the requirements in the document I received, <a href="http://davidwelby.com/ncctest/doc/test.pdf">here</a> within the 2 hour time limit.
+            </p>
+            <p>
+                However with extra time I would have included:
+            <ul>
+                <li>Input field type checking</li>
+                <li>Duplicate checking - disallow duplicate data to be entered </li>
+                <li>Fix bug with bar alignment when there is only a single bar being displayed in the bar chart</li>
+                <li>Included styling to highlight a table column header when filtering by header</li>
+                <li>Appropriate CSS classes (no inline styling)</li>
+                <li>Fully responsive styling on all page elements</li>
+                <li>Fully commented / tested code</li>
+            </ul>
+            </p>
+
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="angular.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="line-chart.min.js"></script>
+<script type="text/javascript" src="smart-table.debug.js"></script>
+<script src="infiniteScrollPlugin.js"></script>
+<script type="text/javascript" src="inputTable.js"></script>
+<script type="text/javascript" src="test.js"></script>
+
+<!-- Google Tag Manager -->
+<script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NQBM53');
+</script>
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-NQBM53" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager -->
+
+</body>
+</html>

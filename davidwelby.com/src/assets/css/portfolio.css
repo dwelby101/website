@@ -1,0 +1,102 @@
+
+
+.port-car-container{
+    width:100%;
+    height:300px;
+    overflow:hidden;
+    margin-top:20px;
+}
+.port-car-img{
+    margin: 0 auto;
+}
+
+.circular {
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    /*background: url("../../img/common/face.jpg");*/
+
+}
+
+.circular-small{
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    -webkit-border-radius: 75px;
+    -moz-border-radius: 75px;
+}
+
+#header{
+    position: fixed;
+    width: 100%;
+    height: 48px;
+    text-align: left;
+    font-size: 24px;
+    line-height: 48px;
+    padding-left: 20px;
+    color: #fff;
+    font-family: 'PT Sans', sans-serif;
+    top: -50px;
+    transition: all 0.5s ease;
+    background-color: rgba(0, 205, 205, 0.5);
+}
+
+#header.sticky {
+    height: 48px;
+    top:0;
+    z-index:1000;
+    transition: all 0.5s ease;
+}
+
+.backdrop-overlay{
+    transition: all 0.2s ease;
+    background-color: rgba(0, 205, 205, 0.5);
+    width:100%;
+    height:100%;
+    z-index: 100;
+    background-image: linear-gradient(rgba(50,255,150,0.5),rgba(21,9,150,0.5));
+}
+
+#menu-container{
+    margin-top:-1%;
+}
+
+.pure-g-fix{
+    letter-spacing: normal;
+}
+
+.more-skills-btn{
+    padding-top:2em;
+    margin:auto;
+    text-align: center;
+}
+
+#moreSkillsCtnr{
+    display: block;
+}
+
+#map-canvas {
+    width: 100%;
+    height: 300px;
+    background-color: #CCC;
+}
+
+.go-top{
+    width:50px;
+    cursor:pointer;
+    float:right;
+}
+.footnote {
+    display: inline-block;
+}
+
+.mail-text{
+    font-size: 200%;
+    color: #5bc0de;
+}
+
+.h4-overwrite{
+    color: #7f8c8d;
+}

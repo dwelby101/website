@@ -1,0 +1,44 @@
+
+<div style="width:80%; display: block; margin-left: auto; margin-right: auto;">
+    <table st-table="displayedCollection" st-safe-src="rowCollection" class="table table-striped">
+        <thead>
+        <tr>
+            <th style="cursor:pointer;" st-sort="id">Test #</th>
+            <th style="cursor:pointer;" st-sort="date">Date</th>
+            <th style="cursor:pointer;" st-sort="sorters.url">URL</th>
+            <th style="cursor:pointer;" st-sort="response">Response Time (ms)</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th>
+                <input placeholder="Date" class="input-sm form-control" type="text" ng-model="input.date"/>
+            </th>
+            <th>
+                <input placeholder="URL" class="input-sm form-control" type="url" ng-model="input.url"/>
+            </th>
+            <th>
+                <input placeholder="Response Time" class="input-sm form-control" type="number" ng-model="input.response"/>
+            </th>
+            <th>
+                <button type="button" ng-click="addData()" class="btn btn-sm btn-success">
+                    <i class="icon-plus icon-large"></i> Add  &nbsp &nbsp &nbsp
+                </button>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="row in displayedCollection ">
+            <td>{{row.id}}</td>
+            <td>{{row.date| date}}</td>
+            <td>{{row.url}}</td>
+            <td>{{row.response}}</td>
+            <td>
+                <button type="button" ng-click="removeItem(row)" class="btn btn-sm btn-danger">
+                    <i class="icon-remove icon-large"></i> Remove
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+

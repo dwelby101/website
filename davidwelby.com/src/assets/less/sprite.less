@@ -1,0 +1,46 @@
+@jasmine: -4px, -4px, 160px, 160px;
+@cplusplus: -4px, -172px, 200px, 200px;
+@jqueryui: -4px, -380px, 200px, 200px;
+@git: -4px, -588px, 200px, 200px;
+@bootstrap: -4px, -796px, 200px, 200px;
+@npm: -4px, -1004px, 242px, 242px;
+@redmine: -4px, -1254px, 300px, 300px;
+@html: -4px, -1562px, 250px, 305px;
+@css3: -4px, -1875px, 250px, 305px;
+@javascript: -4px, -2188px, 250px, 305px;
+@angular: -4px, -2501px, 320px, 320px;
+@grunt: -4px, -2829px, 253px, 337px;
+@jquery: -4px, -3174px, 450px, 480px;
+@less: -4px, -3662px, 512px, 512px;
+@bower-logo: -4px, -4182px, 512px, 512px;
+@visualstudio: -4px, -4702px, 512px, 512px;
+@gimp: -4px, -5222px, 535px, 535px;
+@face: -4px, -5765px, 2448px, 3264px;
+
+.sprite-width(@sprite) {
+  width: extract(@sprite, 3);
+}
+
+.sprite-height(@sprite) {
+  height: extract(@sprite, 4);
+}
+
+.sprite-position(@sprite) {
+  @sprite-offset-x: extract(@sprite, 1);
+  @sprite-offset-y: extract(@sprite, 2);
+  background-position: @sprite-offset-x  @sprite-offset-y;
+}
+
+.sprite(@sprite) {
+  .sprite-position(@sprite);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: block;
+  .sprite-width(@sprite);
+  .sprite-height(@sprite);
+}
+
+.icon {
+  background-image: url('src/assets/img/sprite.png');
+}
+

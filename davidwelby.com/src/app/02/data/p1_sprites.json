@@ -1,0 +1,8 @@
+{
+  "p1_duck":{ "sx":365,"sy":98,"cols":1,"tilew":69,"frames":1,"tileh": 71},
+  "p1_front":{ "sx":0,"sy":196,"cols":1,"tilew":66,"frames":1,"tileh": 92},
+  "p1_hurt":{ "sx":438,"sy":0,"cols":1,"tilew":69,"frames":1,"tileh": 92},
+  "p1_jump":{ "sx":438,"sy":93,"cols":1,"tilew":67,"frames":1,"tileh": 94},
+  "p1_jump":{ "sx":438,"sy":93,"cols":1,"tilew":67,"frames":1,"tileh": 94},
+  "p1_walk":{ "sx":0,"sy":0,"cols":0,"tilew":72,"frames":6,"tileh": 97}
+}

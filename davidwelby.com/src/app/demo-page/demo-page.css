@@ -1,0 +1,21 @@
+.body-color{
+    background-color: silver;
+}
+
+.header-text{
+    text-align: center;
+    color:red;
+}
+
+
+.demo-container{
+    padding-top:100px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.demo-item{
+    padding-top:10px;
+    flex:0 1 auto;
+}

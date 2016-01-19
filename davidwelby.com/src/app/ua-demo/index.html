@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A To Do list on analytics for David Welby.com.">
+    <title>UA / GTM To Do - davidwelby.com</title>
+
+    <!--css-->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="ua-demo.css">
+
+</head>
+<body class="body">
+
+    <div class="image-container">
+        <a class="header-image" target="_blank" href="https://www.google.com/analytics/web/?authuser=0#home/a62831036w98070888p102146805/%3F_u.date00%3D20160116%26_u.date01%3D20160116/">
+            <img class="header-image-icon" alt="ga icon" src="../../assets/img/common/ga.png">
+        </a>
+        <a class="header-image" target="_blank" href="https://tagmanager.google.com/#/container/accounts/160539780/containers/1865102">
+            <img class="header-image-icon" alt="gtm icon" src="../../assets/img/common/gtm.png">
+        </a>
+
+    </div>
+
+    <h1 class="header-text">
+        Intro To Google Analytics & Google Tag Manager
+    </h1>
+
+
+
+    <div class="content-block">
+        <h2>Summary</h2>
+
+        <div class="content-text">
+            In this demo I will attempt to explain what Google Analytics (GA) & Google Tag Manager (GTM) are, what they are used for and what the relationship
+            between these two packages are.
+            I will also show you how to set up a GA account, how to connect GTM to your GA account and how to track basic information across your site.
+        </div>
+    </div>
+
+    <div class="content-block">
+        <h2>What is Google Analytics?</h2>
+
+        <div class="content-text">
+            Google Analytics is a service that can track and report website traffic information.
+            <p>
+                We use GA to gather information and report on how our users interact with our sites so that we can identify poorly
+                performing pages with techniques such as funnel visualization, where visitors came from (referrers),
+                how long they stayed and their geographical position.
+                It also provides more advanced features, including custom visitor segmentation.
+            </p>
+
+        </div>
+    </div>
+
+    <div class="content-block">
+        <h2>What is Google Tag Manager?</h2>
+
+        <div class="content-text">
+            GTM is a system created to manage JavaScript and HTML tags used for tracking and analytics on sites.
+            <p>
+                Tags are bits of code (sometimes referred to as a pixels or beacons) that let us measure traffic and visitor behavior,
+                GTM allows product managers & other non-devs to create and manage tags via a user interface rather than manual
+                insertion and management in the source code.
+            </p>
+
+        </div>
+    </div>
+
+
+    <hr/>
+
+    <div class="content-block">
+
+        <h2>Setting Up Google Analytics</h2>
+
+        <div class="content-text">
+            For us to track activity on our site we must first have a GA account linked up to our actual website.<br>
+            This will give us a GA account ID (aka a container / property) that will allow us to link our tracking code to our GA account for our given website.
+            <p>
+                To set up a GA account and a container you can follow <a href="https://support.google.com/analytics/answer/1008015?hl=en" target="_blank">these steps</a>.
+            </p>
+            <p>
+                <strong>
+                    Note: A single GA account can hold multiple containers / properties, each with their own unique ID, allowing us to track multiple sites from the same GA account.
+                </strong>
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="content-block">
+
+        <h2>Set up event tracking... enter GTM</h2>
+
+        <div class="content-text">
+            Now that we have our GA account and our container / property ID we are almost ready to get started with page tracking.<br>
+            First however we must add code to our site that will allow GA to track these events.
+            <p>
+                There are two ways to collect page tracking data:
+                <ul>
+                    <li>
+                        <h3>
+                            Add the tracking code directly into the HTML of every page of your website.
+                        </h3>
+                        <p>
+                            This is the easiest approach if you only want to add the basic Google Analytics tracking code to your site.<br>
+                            With this snippet you send a pageview for each page your users visits.<br>
+                            GA then processes this data and can infer a great deal of information including:
+                        </p>
+                        <p>
+                            <ol>
+                                <li>The total time a user spends on your site.</li>
+                                <li>The time a user spends on each page and in what order those pages were visited.</li>
+                                <li>What internal links were clicked (based on the URL of the next pageview).</li>
+                            </ol>
+                        </p>
+                            <br>
+                            In addition, the IP address, user agent string, and initial page inspection analytics.js
+                            does when creating a new tracker is used to determine things like the following:<br>
+                            <ol>
+                                <li>The geographic location of the user.</li>
+                                <li>What browser and operating system are being used.</li>
+                                <li>Screen size and whether Flash or Java is installed.</li>
+                                <li>The referring site.</li>
+                            </ol>
+                    </li>
+
+
+                    <li>
+                        <h3>
+                            Add tracking using Google Tag Manager
+                        </h3>
+                        <p>
+                            This step requires having a GTM account
+                        </p>
+                        <p>
+                        <ol>
+                            <li>The total time a user spends on your site.</li>
+                            <li>The time a user spends on each page and in what order those pages were visited.</li>
+                            <li>What internal links were clicked (based on the URL of the next pageview).</li>
+                        </ol>
+                        </p>
+                        <br>
+                        In addition, the IP address, user agent string, and initial page inspection analytics.js
+                        does when creating a new tracker is used to determine things like the following:<br>
+                        <ol>
+                            <li>The geographic location of the user.</li>
+                            <li>What browser and operating system are being used.</li>
+                            <li>Screen size and whether Flash or Java is installed.</li>
+                            <li>The referring site.</li>
+                        </ol>
+                    </li>
+
+                </ul>
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="content-block">
+        <h3>Debug Tools</h3>
+
+        <div class="content-text">
+            <a target="_blank" href="https://chrome.google.com/webstore/detail/google-analytics-debugger/jnkmfdileelhofjcijamephohjechhna?hl=en">
+                GA Debugger
+            </a>
+            <br>
+            <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/debugging" target="_blank">
+                analytics_debug.js
+            </a>
+
+        </div>
+    </div>
+
+
+    <div class="to-do-ua-demo-container">
+
+        <h3>To Do List for UA / GTM DEMO</h3>
+
+        <ol>
+            <li>Create basic layout on demo page:</li>
+                <ul>
+                    <li>Steps</li>
+                    <li>links to slideshow (upload slideshow on google docs - prezzy???)</li>
+                    <li>links to debugger tools</li>
+                </ul>
+            <li>Create Slide show for Friday demo</li>
+            <li>Ensure page and demo page work after upload</li>
+            <li>Fix image bugs on landing page</li>
+            <li>Update content to reflect current job</li>
+        </ol>
+
+
+    </div>
+
+
+
+
+
+
+
+<!-- Google Tag Manager -->
+<script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NQBM53');
+</script>
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-NQBM53" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager -->
+
+</body>
+</html>
