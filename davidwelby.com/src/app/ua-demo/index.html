@@ -100,68 +100,102 @@
             First however we must add code to our site that will allow GA to track these events.
             <p>
                 There are two ways to collect page tracking data:
-
-            Just testing that sourcetree works---
-                <ul>
+				
+                <ol>
                     <li>
                         <h3>
                             Add the tracking code directly into the HTML of every page of your website.
                         </h3>
                         <p>
-                            This is the easiest approach if you only want to add the basic Google Analytics tracking code to your site.<br>
-                            With this snippet you send a pageview for each page your users visits.<br>
-                            GA then processes this data and can infer a great deal of information including:
+                            This is the easiest approach (not the best) if you only want to add the basic Google Analytics tracking code to your site.<br>
+                            With this snippet you send a pageview for each page your users visits.<br>                            
                         </p>
                         <p>
-                            <ol>
+							GA then processes this data and can infer a great deal of information including:
+                            <ul>
                                 <li>The total time a user spends on your site.</li>
                                 <li>The time a user spends on each page and in what order those pages were visited.</li>
                                 <li>What internal links were clicked (based on the URL of the next pageview).</li>
-                            </ol>
+                            </ul>
                         </p>
                             <br>
                             In addition, the IP address, user agent string, and initial page inspection analytics.js
                             does when creating a new tracker is used to determine things like the following:<br>
-                            <ol>
+                            <ul>
                                 <li>The geographic location of the user.</li>
                                 <li>What browser and operating system are being used.</li>
                                 <li>Screen size and whether Flash or Java is installed.</li>
                                 <li>The referring site.</li>
-                            </ol>
+                            </ul>
                     </li>
 
 
                     <li>
                         <h3>
-                            Add tracking using Google Tag Manager
+                            Add the <a href="https://support.google.com/tagmanager/answer/6107124?rd=1" target="_blank"> Google Analytics tag (Universal Analytics)</a> using Google Tag Manager
                         </h3>
                         <p>
-                            This step requires having a GTM account
+                            This step requires having a GTM account.<br>
+							Go to <a href="https://tagmanager.google.com" target="_blank"> tagmanager.google.com </a> to create a Google Tag Manager account (or to access an existing account).
                         </p>
                         <p>
-                        <ol>
-                            <li>The total time a user spends on your site.</li>
-                            <li>The time a user spends on each page and in what order those pages were visited.</li>
-                            <li>What internal links were clicked (based on the URL of the next pageview).</li>
-                        </ol>
-                        </p>
-                        <br>
-                        In addition, the IP address, user agent string, and initial page inspection analytics.js
-                        does when creating a new tracker is used to determine things like the following:<br>
-                        <ol>
-                            <li>The geographic location of the user.</li>
-                            <li>What browser and operating system are being used.</li>
-                            <li>Screen size and whether Flash or Java is installed.</li>
-                            <li>The referring site.</li>
-                        </ol>
+							This approach is recommended because using Google Tag Manager simplifies tag management on your site.<br>
+							Using Google Tag Manager makes it easier to add other tags (such as AdWords Conversion Tracking and remarketing tags) to your site and configure your Google Analytics tracking.
+						</p>
+						<p>
+							To do this, add the Google Analytics tag (Universal Analytics, not classic) to your container in <a href="https://tagmanager.google.com" target="_blank">Google Tag Manager</a> and publish the container (Red button top right).
+						</p>
                     </li>
 
-                </ul>
+                </ol>
             </p>
-
         </div>
-
     </div>
+	
+	<div class="content-block">
+
+        <h2>Make sure you're collecting data</h2>
+
+		<div class="content-text">
+		There are a few ways you can check to see if the Google Analytics tracking code on your website is working.
+		</div>
+		
+		<ol>
+			<li>
+				<h3>Check your Real-Time reports</h3>
+				<p>
+					With the Real-Time reports, you can monitor user activity as it happens. If you see data in these reports, it means that your tracking code is currently collecting data.
+					
+					<ul>
+						<li>Sign in to your Analytics account.</li>
+						<li>Navigate to a view in the property to which you added the tracking code. If you only recently added the tracking code to this property (website), it is likely that there will only be one view.</li>
+						<li>Select the Reporting tab.</li>
+						<li>Select Real-Time > Overview.</li>						
+					</ul>
+				</p>
+			</li>
+			
+			<li>
+				<h3>Use Google Tag Assistant</h3>
+				<p>
+					<a href="https://chrome.google.com/webstore/detail/tag-assistant-by-google/kejbdjndbnbjgmefkgdddjlbokphdefk/?utm_source=google.com&utm_medium=referral&utm_campaign=gtar_diag_notification" target="_blank" >
+						Google Tag Assistant</a> is a free Chrome browser extension that shows you if GA tags are firing correctly. <br> 
+						Using Google Tag Assistant, you can record user flows on your website and then view a report of all the hits sent during that flow, as well as how GA interprets them.<br>
+						This tool is quite comprehensive and can give valuable insights, a walkthrough on this tool can be found <a href="https://support.google.com/analytics/answer/6280771" target="_blank">here</a>.
+						
+				</p>
+			</li>
+			
+			<li>
+				<h3>GA Debug</h3>
+				<p>
+					Fill this...
+						
+				</p>
+			</li>
+		</ol>
+		
+	</div>
 
 
 
