@@ -18,10 +18,16 @@
         margin:0 auto;
     }
 
+    .article-container{
+        padding: 0;
+    }
+
     .image-container{
-        display:flex;
+        padding: 50px;
+        display: flex;
         flex-direction: row;
         justify-content: space-around;
+        background-color: lightsteelblue;
     }
 
     .header-image{
@@ -41,7 +47,12 @@
     }
 
     .content-block{
-        padding: 20px 20px 0 20px;
+        margin: 0 20px;
+        padding: 20px 0;
+    }
+
+    .bordered-top{
+        border-top: solid 1px black;
     }
 
     /* ----- base style overrides ----- */
@@ -58,6 +69,10 @@
         width:50%;
     }
 
+    .article-container{
+        padding: 0 100px;
+    }
+
     .header-image-icon{
         height:195px;
     }
@@ -65,8 +80,11 @@
         font-size: 60px;
     }
     .content-block{
-        padding: 20px 100px 0 100px;
+        margin: 0 100px;
+        padding: 20px 0;
     }
+
+
 
 
     /* ----- base style overrides ----- */
