@@ -165,7 +165,8 @@ ga('send', 'pageview');
 		j = d.createElement(s),
 		dl = l != 'dataLayer' ? '&l=' + l : '';
 		j.async = true;
-		j.src ='//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		j.src ='//www.googletagmanager.com/gtm.js?id=' + i + dl;
+		f.parentNode.insertBefore(j, f);
 	})(window, document, 'script', 'dataLayer', 'GTM-XXXXXX');
 	
 </code></pre>
@@ -236,18 +237,42 @@ ga('send', 'pageview');
 
 
 
-            <div class="content-block">
-                <h3>Debug Tools</h3>
+            <div class="content-block bordered-top">
+			
+                <h2>Next up... Custom Dimensions</h2>
 
                 <div class="content-text">
-                    <a target="_blank" href="https://chrome.google.com/webstore/detail/google-analytics-debugger/jnkmfdileelhofjcijamephohjechhna?hl=en">
-                        GA Debugger
-                    </a>
-                    <br>
-                    <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/debugging" target="_blank">
-                        analytics_debug.js
-                    </a>
-
+                  Now that we have GA & GTM set up we have the ability to track events.<br>
+				  Sometimes however we wish to track more than just basic events, this is where <a href="https://support.google.com/analytics/answer/2709828?hl=en" target="_blank">Custom Dimensions</a> come in.
+				  
+				  <h3> What are Custom Dimensions? </h3>
+				  <p>
+				  	Custom dimensions are a way for you to track extra things that are not been tracked in GA by default.<br>
+					And as the name implies; they’re custom. This means that you can specify what you want GA to track.<br>
+					We can use custom dimensions to track user state, authors of pages, levels in games, or any other data you have on a page.<br>
+					<p>
+						Examples of custom dimensions in gardenersworld.com include:
+						<ol>
+							<li>Article Template Name</li>
+							<li>PublishDate</li>
+							<li>Member Status</li>
+							<li>Channel</li>
+							<li>Module</li>
+							<li>Object</li>
+							<li>MemberId</li>
+							<li>ClientID</li>
+							<li>Krux ID</li>
+						</ol>
+					</p>
+					<p>
+					 Once these Custom Dimensions have been set up we can then see the results of these dimensions in relation to events in GA (for example catch memberID on a pageview event).
+					</p>
+					
+					<h3> Setting up Custom Dimensions </h3>
+					<p>
+						Custom Dimensions must be defined in GA.<br>
+					</p>
+				  </p>
                 </div>
             </div>
         </div>
