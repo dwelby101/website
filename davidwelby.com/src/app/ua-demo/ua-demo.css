@@ -9,8 +9,6 @@
 /* Portrait and Landscape */
 @media (min-width: 0px) {
 
-
-
     .to-do-ua-demo-container{
         display:block;
         width:90%;
@@ -50,6 +48,10 @@
         margin: 0 20px;
         padding: 20px 0;
     }
+	
+	.content-text{
+		padding-left: 10px;
+	}
 
     .bordered-top{
         border-top: solid 1px black;
@@ -75,11 +77,9 @@
     .to-do-ua-demo-container{
         width:50%;
     }
-
     .article-container{
         padding: 0 100px;
     }
-
     .header-image-icon{
         height:195px;
     }
@@ -90,6 +90,10 @@
         margin: 0 100px;
         padding: 20px 0;
     }
+	.content-text{
+		padding-left: 20px;
+	}
+	
 	.code-snippet{
 		width:60%;
 		padding:0 20px;

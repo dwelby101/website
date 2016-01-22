@@ -264,32 +264,86 @@ ga('send', 'pageview');
 							<li>Krux ID</li>
 						</ol>
 					</p>
+					
+					<h3>Lifecycle of a Custom Dimension</h3>
 					<p>
-					 Once these Custom Dimensions have been set up we can then see the results of these dimensions in relation to events in GA (for example catch memberID on a pageview event).
+						<ul>
+							<li>
+								<a href="#configuration">Configuration</a> – you define your custom dimensions in GA.
+							</li>
+							<li>
+								Collection – you send custom dimension values to GA.
+							</li>
+							<li>
+								Processing – your data is processed using your custom dimension definitions and any reporting view filters inside GA.
+							</li>
+							<li>
+								Reporting – you build new reports using your custom dimensions GA user interface.
+							</li>
+						</ul>
 					</p>
 					
-					<h3> Setting up Custom Dimensions </h3>
+					<h3 id="configuration"> Setting up Custom Dimensions - Configuration</h3>
 					<p>
 						Custom Dimensions must be defined in GA.<br>
+						This can be done by going to the correct property for the GA account you have, for us this is; <br>
+						Account = Gardeners World > Property = UAT Gardeners World > Custom Definitions > Custom Dimensions. <br>
+						From here we now have the ability to add a new custom dimension.<br>
+						<p>
+						When we create a new custom dimension we are given three options:
+							<ol>
+								<li>Name</li>
+								<li>Scope</li>
+								<li>Active state</li>
+							</ol>
+						
+						At this point is is important to note that for the non-premium GA there are a <strong>maximum of 20 custom dimensions per property</strong> (200 in GA Premium).<br>
+						Also note that once a custom dimension has been created it <strong>cannot be deleted</strong>, so create them with care.
+						</p>
+						The index of the new custom dimension is also worth noting as when you are debugging GA to test that your dimensions are being set you will see them displayed as 'dimensionX' (X = index of custom dimension).<br>
+						<p>
+							Example:<br>
+							<div class="code-snippet"><code>ga("gtm1453460425693.set", "<strong>dimension2</strong>", "01-01-0001")</code></div><br>
+							Of the three parameters we are presented with when creating a custom dimension two of them are self explanatory, Name & Active state, but there is some mystery around what the'Scope' of a custom dimension is.
+						</p>
 					</p>
-				  </p>
+					
+					<h3>What is the 'Scope' of a Custom Dimensions?</h3>
+					<p>
+						The scope attribute determines which hits will be associated with a custom dimension value.<br>
+						There are four levels of scope: <strong>product, hit, session, </strong> and <strong>user</strong>:
+						<ul>
+							<li>
+								<strong>Product -</strong> This binds the custom dimension to the <strong>Enhanced Ecommerce event</strong> and the product its sent with.<br>
+								This means that it only exists in that single event (think - 'add to cart', 'checkout' , 'purchase' ) and not through the entire Enhanced Ecommerce funnel.<br>
+								More info <a href="http://www.simoahava.com/gtm-tips/product-scoped-custom-dimensions-and-metrics/" target="_blank">here</a>.
+							</li>
+							<li>
+								<strong>Hit -</strong> This means the value is applied to the single hit for which it has been set. (think - setting memberState on log-out button click event)<br>
+								More info on what a Hit is <a href="https://support.google.com/analytics/answer/6086082?hl=en" target="_blank">here</a>.
+							</li>
+							<li>
+								<strong>Session -</strong> When a custom dimension is set with session scope it means that the most recent value being applied to that custom dimension
+								will persist across all hit values for that session, even overriding previous hits that would have set the custom dimension to a different value.
+								More info <a href="https://support.google.com/analytics/answer/2709828?hl=en#processing" target="_blank">here</a>.
+							</li>
+							<li>
+								<strong>User -</strong> 
+								User scope means that if a custom dimension is set to a value during a single session, this value - unless changed - will persist into the next session for that user.
+							</li>
+						</ul>
+					</p>					
                 </div>
             </div>
+			
+			<div class="content-block bordered-top">
+				
+				<h2>Collection</h2>
+				<h3> Still to come... collecting data using the data layer.</h3>
+			</div>
         </div>
 
-        <div class="to-do-ua-demo-container">
-
-            <h3>To Do List for UA / GTM DEMO</h3>
-
-            <ol>
-                <li>Write section on the Data Layer, what it is, how its used, any caveats / special features</li>
-                <li>Ensure page and demo page work after upload</li>
-
-            </ol>
-
-
-        </div>
-
+     
 
         <!-- Google Tag Manager -->
         <script>
