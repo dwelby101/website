@@ -106,7 +106,7 @@ $win.resize(getWidth).mousemove(function(e) {
 
 
     //make sure works in all browsers - see bookmark called dynamic gradient
-    $('#colourOverlay').css('background-image','linear-gradient(rgba('+ rgb1.join(',')+'), rgba('+rgb2.join(',')+'))');
+    $('.colourOverlay').css('background-image','linear-gradient(rgba('+ rgb1.join(',')+'), rgba('+rgb2.join(',')+'))');
 
     //set header colour to dynamic bg colour
     $('#header').css('background','rgba('+ rgb1.join(',')+')' );

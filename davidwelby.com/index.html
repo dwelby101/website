@@ -5,14 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="David Welby - Front End Web Developer">
 
-
     <title>David Welby . com</title>
+
+
     <link rel="stylesheet" href="src/assets/css/pure-min.css">
     <link rel="stylesheet" href="src/assets/css/side-menu.css">
     <!--<link rel="stylesheet" href="src/assets/css/base64.css">
     <link rel="stylesheet" href="src/assets/css/sprite.css">-->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="src/assets/css/portfolio.css" rel="stylesheet">
+
+    <!-- Particles-->
+    <link rel="stylesheet" href="src/assets/css/particles/particles.css">
+
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 <!--[if lte IE 8]>
     <link rel="stylesheet" href="src/assets/css/grids-responsive-old-ie-min.css">
@@ -30,13 +35,15 @@
 <body>
 
 <div id="main" class="splash-container backdrop-img parallax" data-speed="10"><!-- backdrop-img-->
-    <div id="colourOverlay" class="backdrop-overlay">
+
+    <!-- particles.js container -->
+    <div id="particles-js" class="colourOverlay backdrop-overlay">
         <div id="splash" class="splash parallax" data-speed="2">
             <h1 class="splash-head">David Welby</h1>
             <p class="splash-subhead">
                 Front End Web Developer
             </p>
-            <a class="pure-button" href="src/app/demo-page/index.html">Demo Page</a>
+            <!--<a class="pure-button" href="src/app/demo-page/index.html">Demo Page</a>-->
         </div>
     </div>
 </div>
@@ -662,6 +669,11 @@
 <script type="text/javascript" src="src/assets/jquery-2.1.3.min.js"></script>
 <!--<script src="https://maps.googleapis.com/maps/api/js"></script>-->
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<!--instead of inlining all scripts, look at AMD approach-->
+<script type="text/javascript" src="src/assets/scripts/particles-source.min.js"></script>
+<script type="text/javascript" src="src/assets/scripts/particles.js"></script>
+
 <script type="text/javascript" src="src/main.js"></script>
 
 
