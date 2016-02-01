@@ -111,7 +111,6 @@ $win.resize(getWidth).mousemove(function(e) {
     //set header colour to dynamic bg colour
     $('#header').css('background','rgba('+ rgb1.join(',')+')' );
 
-
 }).resize();
 
 
@@ -167,26 +166,10 @@ function moreSkills(buttonId)  {
 
 }
 
+
+/***********************************************
+ * Function for scrolling to top of page
+ ***********************************************/
 function scrollToTop() {
     $("html, body").animate({scrollTop: 0}, "slow");
 }
-
-
-/***********************************************
- * Function for initializing the google map
- ***********************************************/
-/*
-function initialize() {
-    var mapCanvas = document.getElementById('map-canvas');
-    var mapOptions = {
-        center: new google.maps.LatLng(51.5286416, -0.1015987),
-        zoom: 10,
-        mapTypeId: google.maps.MapTypeId.LONDONMAP,
-        disableDefaultUI: true
-    }
-    var map = new google.maps.Map(mapCanvas, mapOptions);
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
-*/
-console.log(10+"20");

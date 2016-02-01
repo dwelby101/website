@@ -4,32 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A To Do list on analytics for David Welby.com.">
-    <link rel="stylesheet" href="../../../src/assets/css/pure-min.css">
+
+    <link rel="stylesheet" href="../../assets/css/pure-min.css">
+    <!-- Particles-->
+    <link rel="stylesheet" href="../../assets/css/particles/particles.css">
+
     <link rel="stylesheet" href="demo-page.css">
 
 
     <title>DEMO PAGE - davidwelby.com</title>
 </head>
-<body class="body-color">
 
+<body class="">
 
-    <h3 class="header-text">DEMO PAGE</h3>
+    <div id="main" class="demopage-splash-container" >
 
-    <div class="demo-container">
-        <div class="demo-item">
-            <a class="pure-button" href="../02/index.html">FC Game</a>
+        <!-- particles.js container -->
+        <div id="particles-js" class="colourOverlay demopage-backdrop-overlay">
+            <div id="splash" class="demopage-splash" data-speed="2">
+
+                <h1 class="demopage-splash-head">DEMO PAGE</h1>
+
+                <p class="demopage-splash-subhead">
+                    A few bits & bobs
+                </p>
+
+                <div class="demo-container">
+                    <div class="demo-item">
+                        <a class="pure-button" href="../02/index.html">FC Game</a>
+                    </div>
+
+                    <div class="demo-item">
+                        <a class="pure-button" href="../ncctest/index.html">NCC Test</a>
+                    </div>
+
+                    <div class="demo-item">
+                        <a class="pure-button" href="../ua-demo/index.html">GA / GTM</a>
+                    </div>
+                </div>
+
+            </div>
         </div>
-
-        <div class="demo-item">
-            <a class="pure-button" href="../ncctest/index.html">NCC Test</a>
-        </div>
-
-        <div class="demo-item">
-            <a class="pure-button" href="../ua-demo/index.html">GA / GTM</a>
-        </div>
-
     </div>
 
+
+<!--instead of inlining all scripts, look at AMD approach-->
+<script type="text/javascript" src="../../assets/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="../../assets/scripts/particles-source.min.js"></script>
+<script type="text/javascript" src="../../assets/scripts/particles.js"></script>
+
+<script type="text/javascript" src="demo-page.js"></script>
 
 <!-- Google Tag Manager -->
 <script>

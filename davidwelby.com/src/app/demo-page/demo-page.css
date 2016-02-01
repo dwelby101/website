@@ -19,3 +19,54 @@
     padding-top:10px;
     flex:0 1 auto;
 }
+
+
+.demopage-splash-container {
+    background: #808080;
+    z-index: 1;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed !important;
+}
+
+
+.demopage-splash {
+    width: 80%;
+    height: 50%;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* This is the main heading that appears on the blue section */
+.demopage-splash-head {
+    font-size: 20px;
+    color: white;
+    border-bottom: 2px solid white;
+    padding: 1em 1.6em;
+    font-weight: 100;
+    line-height: 1em;
+}
+
+/* This is the subheading that appears on the blue section */
+.demopage-splash-subhead {
+    color: white;
+    letter-spacing: 0.05em;
+    opacity: 0.8;
+}
+
+
+
+.demopage-backdrop-overlay{
+    transition: all 0.2s ease;
+    background-color: rgba(0, 205, 205, 0.5);
+    width:100%;
+    height:100%;
+    z-index: 100;
+    background-image: linear-gradient(rgba(50,255,150,0.5),rgba(21,9,150,0.5));
+}
