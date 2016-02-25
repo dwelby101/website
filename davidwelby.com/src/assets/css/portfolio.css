@@ -100,3 +100,7 @@
 .h4-overwrite{
     color: #7f8c8d;
 }
+
+.bullet-pts li{
+    margin-bottom:10px;
+}
